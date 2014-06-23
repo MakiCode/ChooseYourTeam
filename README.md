@@ -59,3 +59,13 @@ Example of data:
         ]
       }
     }
+    
+    
+TODO
+====
+
+Normalize flag sizes
+Standardize use of single vs double quotes in data
+Fix capitalization errors
+Fix wrong refrence (e.g. talking about the flag of spain vs. showing a picture of italy)
+Finally finished the data, the above has not been done but I can't stand looking at it again. Time to start on JS!
