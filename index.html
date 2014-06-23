@@ -6,19 +6,24 @@
 
         <script src="lib/jquery/dist/jquery.min.js"></script>
         <script src="lib/handlebars/handlebars.min.js"></script>
-        <!--script src="Main.js"></script-->
-        <script>
-            $(function () {
-                console.log("window.location.hash: '" + window.location.hash + "'");
-                $(window).on("hashchange", function () {
-                    console.log("New hash: " + window.location.hash)
-                })
-            });
-        </script>
+        <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="Main.js"></script>
+
+        <link href="lib/bootstrap/dist/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+        <link href="Main.css" type="text/css" rel="stylesheet">
+        <!--[if lte IE 7]>
+        <link href="IE7.css" type="text/css" rel="stylesheet"/>
+        <![endif]-->
+
+
     </head>
     <body>
-        <div id="main-panel">
-
+        <div class="outer">
+            <div class="middle">
+                <div class="inner">
+                    <div id="main-panel"></div>
+                </div>
+            </div>
         </div>
     </body>
 </html>

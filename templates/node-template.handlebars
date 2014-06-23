@@ -1,0 +1,26 @@
+<div class="panel">
+    <div class="main-text panel panel-default">
+        <div class="text panel-heading">{{text}}
+            {{#if img}}
+                <div class="img-container">
+                    <img class="image" src="img/{{img.src}}.png" alt="{{img.alt}}">
+                </div>
+            {{/if}}
+        </div>
+        {{#if branches}}
+            <div class="branches list-group">
+                {{#each branches}}
+                    {{#if text}}
+                        <div class="branch list-group-item"><a class="branch-text" href="#{{id}}">{{text}}</a></div>
+                    {{else}}
+                        <div class="branch list-group-item"><a class="branch-text" href="#{{id}}">Next</a></div>
+                    {{/if}}
+                {{/each}}
+                {{#if history}}
+                    <div class="history list-group-item"><a class="history-text" href="#{{history}}">Previous panel</a>
+                    </div>
+                {{/if}}
+            </div>
+        {{/if}}
+    </div>
+</div>

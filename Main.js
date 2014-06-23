@@ -2,10 +2,9 @@
  * Created by Huulktya on 6/22/14.
  */
 
-
 //For images, assume img/ is prepended and .png is appended
 //DATA IS FINALLY DONE! Time to start the above.s
-var data = {
+var treeData = {
     whichTeam: {
         text: "Which World Cup team should I root for?",
         branches: [
@@ -612,7 +611,6 @@ var data = {
         }
     }
 };
-
 /**
  * Method taken (with slight adaptations) from [this](http://berzniz.com/post/24743062344/handling-handlebars-js-like-a-pro).
  * This method unifies the interface between precompiled handlebars templates and templates and executed at runtime
@@ -635,39 +633,98 @@ Handlebars.getTemplate = function (name) {
     return Handlebars.templates[name];
 };
 
-var root = "whichTeam";
-
-function getHashOrDefault() {
-    var hash = window.location.hash ? window.location.hash.substring(1) : root;
-    if (!data.hasOwnProperty(hash)) {
-        hash = root;
-    }
-    return hash;
-}
-
 /**
  * This object manages output to the HTML. It takes the current context, an object with all of the fields needed to create the UI.
- * This object can be any of the top level objects in `data`
+ * This object can be any of the top level objects in `treeData`
  */
 var output = (function () {
     var nodeRenderer = Handlebars.getTemplate("node-template");
-    return function () {
-        return {
-            render: function (context) {
-                $("#main-panel").html(nodeRenderer(context));
-            }
+
+    var lastContext = null;
+
+    var transitionRenderer = {
+
+    };
+
+    return {
+        render: function (context) {
+//            if (lastContext == null) {
+            //              lastContext = context
+            //        }
+
+//            if (context != lastContext) {
+
+            //Animate a transition
+            //          } else {
+            //First render, do not animate
+            $("#main-panel").html(nodeRenderer(context));
+            //        }
+
         }
     };
 })();
 
-var App = (function (output) {
-    var current = getHashOrDefault();
-    $(window).on("hashchange", function () {
-        reload();
-    });
+/**
+ * Process data to add a history field on all elements.
+ *
+ * Uses the following algorithm:
+ *  Add root to stack
+ *  While there are still nodes in the stack,
+ *    Examine branches field of current node
+ *    Extract each id referenced by this node.
+ *    Create a 'history' variable on each nodes
+ *    that is referenced that points to the current
+ *    node.
+ *    add each child to the stack
+ *
+ *    TODO detect and throw exception if data has a cyclical dependency,
+ *    TODO detect and handle the multi-parent issue
+ *
+ */
+var dataProcessor = function (data, root) {
+    var stack = [root];
+    while (stack.length != 0) {
+        var current = stack.pop();
+        if (data[current].branches) {
+            for (var i = 0; i < data[current].branches.length; i++) {
+                var child = data[current].branches[i].id;
+                if (data.hasOwnProperty(child)) {
+                    data[child].history = current;
+                    stack.push(child);
+                }
+            }
+        }
+    }
+};
 
-    var reload = function () {
-        current = getHashOrDefault();
-        output.render(data[current])
-    };
-})(output());
+
+$(function () {
+    var flowChartViewerApp = (function (output, preprocessors) {
+        var root = "whichTeam";
+
+        function getHashOrDefault() {
+            var hash = window.location.hash ? window.location.hash.substring(1) : root;
+            if (!treeData.hasOwnProperty(hash)) {
+                hash = root;
+            }
+            return hash;
+        }
+
+        for (var i = 0; i < preprocessors.length; i++) {
+            preprocessors[i](treeData, root);
+
+        }
+
+        var reload = function () {
+            output.render(treeData[getHashOrDefault()])
+        };
+
+        $(window).on("hashchange", function () {
+            reload();
+        });
+        reload();
+        //    var current = getHashOrDefault();
+//        window.location.hash = "#";
+        //      window.location.hash = "#" + current;//A hack to get the event listener to fire
+    })(output, [dataProcessor])
+});

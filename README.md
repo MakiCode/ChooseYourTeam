@@ -58,6 +58,13 @@ Example of data:
           }
         ]
       }
+    },
+    korea: {
+      text: "South Korea",
+      img: {
+        src: "Flag_of_South_Korea",
+        alt: "A picture of the flag of South Korea"
+       }
     }
     
     
