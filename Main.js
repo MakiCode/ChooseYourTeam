@@ -2,7 +2,6 @@
  * Created by Huulktya on 6/22/14.
  */
 
-var startingPoint = "whichTeam";
 
 //For images, assume img/ is prepended and .png is appended
 //DATA IS FINALLY DONE! Time to start the above.s
@@ -614,6 +613,61 @@ var data = {
     }
 };
 
-var App = (function () {
-    var currentContext = data[startingPoint];
+/**
+ * Method taken (with slight adaptations) from [this](http://berzniz.com/post/24743062344/handling-handlebars-js-like-a-pro).
+ * This method unifies the interface between precompiled handlebars templates and templates and executed at runtime
+ * @param name The template name to load
+ * @returns {*} A handlebars template
+ */
+Handlebars.getTemplate = function (name) {
+    if (Handlebars.templates === undefined || Handlebars.templates[name] === undefined) {
+        $.ajax({
+            url: 'templates/' + name + '.handlebars',
+            success: function (data) {
+                if (Handlebars.templates === undefined) {
+                    Handlebars.templates = {};
+                }
+                Handlebars.templates[name] = Handlebars.compile(data);
+            },
+            async: false
+        });
+    }
+    return Handlebars.templates[name];
+};
+
+var root = "whichTeam";
+
+function getHashOrDefault() {
+    var hash = window.location.hash ? window.location.hash.substring(1) : root;
+    if (!data.hasOwnProperty(hash)) {
+        hash = root;
+    }
+    return hash;
+}
+
+/**
+ * This object manages output to the HTML. It takes the current context, an object with all of the fields needed to create the UI.
+ * This object can be any of the top level objects in `data`
+ */
+var output = (function () {
+    var nodeRenderer = Handlebars.getTemplate("node-template");
+    return function () {
+        return {
+            render: function (context) {
+                $("#main-panel").html(nodeRenderer(context));
+            }
+        }
+    };
 })();
+
+var App = (function (output) {
+    var current = getHashOrDefault();
+    $(window).on("hashchange", function () {
+        reload();
+    });
+
+    var reload = function () {
+        current = getHashOrDefault();
+        output.render(data[current])
+    };
+})(output());
