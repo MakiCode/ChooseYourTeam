@@ -21,6 +21,13 @@
                     </div>
                 {{/if}}
             </div>
+        {{else}}
+            {{#if history}}
+                <div class="list-group">
+                    <div class="history list-group-item"><a class="history-text" href="#{{history}}">Previous panel</a>
+                    </div>
+                </div>
+            {{/if}}
         {{/if}}
     </div>
 </div>

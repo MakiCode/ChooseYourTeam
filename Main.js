@@ -648,18 +648,7 @@ var output = (function () {
 
     return {
         render: function (context) {
-//            if (lastContext == null) {
-            //              lastContext = context
-            //        }
-
-//            if (context != lastContext) {
-
-            //Animate a transition
-            //          } else {
-            //First render, do not animate
             $("#main-panel").html(nodeRenderer(context));
-            //        }
-
         }
     };
 })();
@@ -723,8 +712,6 @@ $(function () {
             reload();
         });
         reload();
-        //    var current = getHashOrDefault();
-//        window.location.hash = "#";
-        //      window.location.hash = "#" + current;//A hack to get the event listener to fire
+
     })(output, [dataProcessor])
 });
