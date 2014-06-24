@@ -1,14 +1,12 @@
 <div class="main-text panel panel-default">
-    <div class="panel-heading">
-        {{#if question}}
-            Question:
-        {{else}}
-            You are:
-        {{/if}}
-    </div>
+    {{#if title}}
+        <div class="panel-heading">
+            {{title}}
+        </div>
+    {{/if}}
     <div class="text panel-body text-center">
         <label for="answers">
-            {{text}}
+            {{#if title}}<span class="sr-only">{{title}}</span>{{/if}} {{text}}
         </label>
         {{#if img}}
             <div class="img-container">

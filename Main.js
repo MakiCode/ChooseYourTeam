@@ -669,7 +669,7 @@ var output = (function () {
  *
  *    TODO detect and throw exception if data has a cyclical dependency,
  *    TODO detect and handle the multi-parent issue
- *
+ *    TODO remove hacks
  */
 var dataProcessor = function (data, root) {
     var stack = [root];
@@ -677,9 +677,11 @@ var dataProcessor = function (data, root) {
         var current = stack.pop();
         //Because all leaf nodes have img properties, this hack works. I really should
         // not use it though because it's tying me to the current data structure.
+        // And it's just terrible code.
         //START HACK
-        if (data[current].hasOwnProperty("img")) {
-            data[current].question = false;
+        data[current].title = !data[current].hasOwnProperty("img") ? "You should root for: " : "Question: ";
+        if (data[current].title === "You should root for: ") {
+            data[current].title = data[current].hasOwnProperty("branches") ? "Question: " : "";
         }
         //END HACK
         if (data[current].branches) {
@@ -692,6 +694,7 @@ var dataProcessor = function (data, root) {
             }
         }
     }
+    console.dir(data);
 };
 
 
