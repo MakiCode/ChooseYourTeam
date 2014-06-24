@@ -18,11 +18,11 @@ var treeData = {
         branches: [
             {
                 id: 'notATraitor',
-                text: 'Yes'
+                text: 'Yes.'
             },
             {
                 id: 'didYouStudy',
-                text: 'No'
+                text: 'No.'
             }
         ]
     },
@@ -34,11 +34,11 @@ var treeData = {
         branches: [
             {
                 id: "dontRootForThatTeam",
-                text: "yes"
+                text: "Yes."
             },
             {
                 id: 'aTeamMightWinItAll',
-                text: 'no'
+                text: 'No.'
             }
         ]
     },
@@ -50,11 +50,11 @@ var treeData = {
         branches: [
             {
                 id: "howDoYouFeelAboutDiving",
-                text: 'Yes'
+                text: 'Yes.'
             },
             {
                 id: "realUnderdogs",
-                text: 'No, I like underdogs'
+                text: 'No, I like underdogs.'
             }
         ]
     },
@@ -76,7 +76,7 @@ var treeData = {
         branches: [
             {
                 id: 'italy',
-                text: "Everyone's a little bit racist"
+                text: "Everyone's a little bit racist."
             },
             {
                 id: "spain",
@@ -85,17 +85,17 @@ var treeData = {
         ]
     },
     italy: {
-        text: "Italy",
+        text: "Italy.",
         img: {
             src: "Flag_of_Italy",
-            alt: "A picture of the flag of Italy"
+            alt: "A picture of the flag of Italy."
         }
     },
     spain: {
-        text: "Spain",
+        text: "Spain.",
         img: {
             src: "Flag_of_Spain",
-            alt: "A picture of the flag of Spain"
+            alt: "A picture of the flag of Spain."
         }
     },
     sexOrSoccer: {
@@ -112,37 +112,37 @@ var treeData = {
         ]
     },
     dribblingOrPassing: {
-        text: "What do you prefer: passing or dribbling",
+        text: "What do you prefer: passing or dribbling?",
         branches: [
             {
                 id: "argentina",
-                text: "Dribbling"
+                text: "Dribbling."
             },
             {
                 id: "germany",
-                text: "passing"
+                text: "passing."
             }
         ]
     },
     argentina: {
-        text: "Argentina",
+        text: "Argentina.",
         img: {
             src: "Flag_of_Argentina",
-            alt: "A picture of the flag of Argentina"
+            alt: "A picture of the flag of Argentina."
         }
     },
     germany: {
-        text: "Germany",
+        text: "Germany.",
         img: {
             src: "Flag_of_Germany",
-            alt: "A picture of the flag of Germany"
+            alt: "A picture of the flag of Germany."
         }
     },
     brazil: {
-        text: "Brazil",
+        text: "Brazil.",
         img: {
             src: "Flag_of_Brazil",
-            alt: "A picture of the flag of Brazil"
+            alt: "A picture of the flag of Brazil."
         }
     },
     realUnderdogs: {
@@ -158,7 +158,7 @@ var treeData = {
             },
             {
                 id: "internationalSoccerExcuse",
-                text: "No, I like teams that embrace the underdog label despite being powerful, populous, and economically successful"
+                text: "No, I like teams that embrace the underdog label despite being powerful, populous, and economically successful."
             }
         ]
     },
@@ -176,10 +176,10 @@ var treeData = {
         ]
     },
     netherlands: {
-        text: "Netherlands",
+        text: "Netherlands.",
         img: {
-            src: "Flag_of_Netherlands",
-            alt: "A picture of the flag of Netherlands"
+            src: "Flag_of_the_Netherlands",
+            alt: "A picture of the flag of Netherlands."
         }
     },
     losingWithAttitude: {
@@ -200,24 +200,24 @@ var treeData = {
         ]
     },
     france: {
-        text: "France",
+        text: "France.",
         img: {
             src: "Flag_of_France",
-            alt: "A picture of the flag of France"
+            alt: "A picture of the flag of France."
         }
     },
     england: {
-        text: "England",
+        text: "England.",
         img: {
             src: "Flag_of_England",
-            alt: "A picture of the flag of England"
+            alt: "A picture of the flag of England."
         }
     },
     portugal: {
-        text: "Portugal",
+        text: "Portugal.",
         img: {
             src: "Flag_of_Portugal",
-            alt: "A picture of the flag of Portugal"
+            alt: "A picture of the flag of Portugal."
         }
     },
     internationalSoccerExcuse: {
@@ -225,26 +225,26 @@ var treeData = {
         branches: [
             {
                 id: "unitedStates",
-                text: "Yes"
+                text: "Yes."
             },
             {
                 id: "japan",
-                text: "No"
+                text: "No."
             }
         ]
     },
     unitedStates: {
-        text: "United States",
+        text: "United States.",
         img: {
-            src: "Flag_of_United_States",
-            alt: "A picture of the flag of the United States"
+            src: "Flag_of_the_United_States",
+            alt: "A picture of the flag of the United States."
         }
     },
     japan: {
-        text: "Japan",
+        text: "Japan.",
         img: {
             src: "Flag_of_Japan",
-            alt: "A picture of the flag of Japan"
+            alt: "A picture of the flag of Japan."
         }
     },
     anyChanceOutOfGroup: {
@@ -260,7 +260,7 @@ var treeData = {
             },
             {
                 id: "bitePeople",
-                text: "Yes"
+                text: "Yes."
             }
         ]
     },
@@ -273,22 +273,22 @@ var treeData = {
             },
             {
                 id: "costaRica",
-                text: "Kangaroos are stupid"
+                text: "Kangaroos are stupid."
             }
         ]
     },
     australia: {
-        text: "Australia",
+        text: "Australia.",
         img: {
             src: "Flag_of_Australia",
-            alt: "A picture of the flag of Australia"
+            alt: "A picture of the flag of Australia."
         }
     },
     costaRica: {
-        text: "Costa Rica",
+        text: "Costa Rica.",
         img: {
             src: "Flag_of_Costa_Rica",
-            alt: "A picture of the flag of Costa Rica"
+            alt: "A picture of the flag of Costa Rica."
         }
     },
     likeAuthoritarianRegime: {
@@ -296,11 +296,11 @@ var treeData = {
         branches: [
             {
                 id: "honduras",
-                text: "No, but I'm OK rooting for the country with the highest-per-capita murder rate in the world"
+                text: "No, but I'm OK rooting for the country with the highest-per-capita murder rate in the world."
             },
             {
                 id: "switzerland",
-                text: "I'm completely ambivalent about all matters"
+                text: "I'm completely ambivalent about all matters."
             },
             {
                 id: "womenAndSoccer",
@@ -308,7 +308,7 @@ var treeData = {
             },
             {
                 id: "samsungGalaxy",
-                text: "No, not at all"
+                text: "No, not at all."
             }
         ]
     },
@@ -316,14 +316,14 @@ var treeData = {
         text: "Honduras",
         img: {
             src: "Flag_of_Honduras",
-            alt: "A picture of the flag of Honduras"
+            alt: "A picture of the flag of Honduras."
         }
     },
     switzerland: {
         text: "Switzerland",
         img: {
             src: "Flag_of_Switzerland",
-            alt: "A picture of the flag of Switzerland"
+            alt: "A picture of the flag of Switzerland."
         }
     },
     womenAndSoccer: {
@@ -335,15 +335,15 @@ var treeData = {
             },
             {
                 id: "invadingOtherCountries",
-                text: "Obviously"
+                text: "Obviously."
             }
         ]
     },
     iran: {
-        text: "Iran",
+        text: "Iran.",
         img: {
             src: "Flag_of_Iran",
-            alt: "A picture of the flag of Iran"
+            alt: "A picture of the flag of Iran."
         }
     },
     invadingOtherCountries: {
@@ -351,11 +351,11 @@ var treeData = {
         branches: [
             {
                 id: "russia",
-                text: "It's basically my favorite thing"
+                text: "It's basically my favorite thing."
             },
             {
                 id: "whichOne",
-                text: "Look, I just want to root for an African authoritarian regime with green jerseys"
+                text: "Look, I just want to root for an African authoritarian regime with green jerseys."
             }
         ]
     },
@@ -364,41 +364,41 @@ var treeData = {
         branches: [
             {
                 id: "algeria",
-                text: "Algeria"
+                text: "Algeria."
             },
             {
                 id: "cameroon",
-                text: "Cameroon"
+                text: "Cameroon."
             },
             {
                 id: "nigeria",
-                text: "Nigeria"
+                text: "Nigeria."
             }
         ]
     },
     algeria: {
-        text: "Algeria",
+        text: "Algeria.",
         img: {
             src: "Flag_of_Algeria",
-            alt: "A picture of the flag of Algeria"
+            alt: "A picture of the flag of Algeria."
         }
     },
     cameroon: {
-        text: "Cameroon",
+        text: "Cameroon.",
         img: {
             src: "Flag_of_Cameroon",
-            alt: "A picture of the flag of Cameroon"
+            alt: "A picture of the flag of Cameroon."
         }
     },
     nigeria: {
-        text: "Nigeria",
+        text: "Nigeria.",
         img: {
             src: "Flag_of_Nigeria",
-            alt: "A picture of the flag of Nigeria"
+            alt: "A picture of the flag of Nigeria."
         }
     },
     samsungGalaxy: {
-        text: "Do you have a Samsung Galaxy",
+        text: "Do you have a Samsung Galaxy?",
         branches: [
             {
                 id: "korea",
@@ -406,39 +406,39 @@ var treeData = {
             },
             {
                 id: "beautifulCheckerboard",
-                text: "No"
+                text: "No."
             }
         ]
     },
     korea: {
-        text: "South Korea",
+        text: "South Korea.",
         img: {
             src: "Flag_of_South_Korea",
-            alt: "A picture of the flag of South Korea"
+            alt: "A picture of the flag of South Korea."
         }
     },
     beautifulCheckerboard: {
-        text: "Do you often find yourself staring at the beauty of a checkerboard",
+        text: "Do you often find yourself staring at the beauty of a checkerboard.",
         branches: [
             {
                 id: "croatia",
-                text: "I thought I was the only one"
+                text: "I thought I was the only one."
             },
             {
                 id: "lotsOfCoffee",
-                text: "No"
+                text: "No."
             }
         ]
     },
     croatia: {
-        text: "Croatia",
+        text: "Croatia.",
         img: {
             src: "Flag_of_Croatia",
-            alt: "A picture of the flag of Croatia"
+            alt: "A picture of the flag of Croatia."
         }
     },
     lotsOfCoffee: {
-        text: "Do you drink a lot of coffee,",
+        text: "Do you drink a lot of coffee?",
         branches: [
             {
                 id: "colombia",
@@ -446,7 +446,7 @@ var treeData = {
             },
             {
                 id: "aboutWine",
-                text: "No"
+                text: "No."
             }
         ]
     },
@@ -461,12 +461,12 @@ var treeData = {
         text: "What about wine?",
         branches: [
             {
-                id: "noDistinctCharacteristics",
-                text: "No"
-            },
-            {
                 id: "greece",
                 text: "Does six glasses a day count as a lot?"
+            },
+            {
+                id: "noDistinctCharacteristics",
+                text: "No."
             }
         ]
     },
@@ -479,21 +479,21 @@ var treeData = {
         ]
     },
     ecuador: {
-        text: "Ecuador",
+        text: "Ecuador.",
         img: {
             src: "Flag_of_Ecuador",
-            alt: "A picture of the flag of Ecuador"
+            alt: "A picture of the flag of Ecuador."
         }
     },
     greece: {
-        text: "Greece",
+        text: "Greece.",
         img: {
             src: "Flag_of_Greece",
-            alt: "A picture of the flag of Greece"
+            alt: "A picture of the flag of Greece."
         }
     },
     bitePeople: {
-        text: "Do you bite people to express your frustration",
+        text: "Do you bite people to express your frustration?",
         branches: [
             {
                 id: "uruguay",
@@ -501,15 +501,15 @@ var treeData = {
             },
             {
                 id: "smartassBarPlayer",
-                text: "No"
+                text: "No."
             }
         ]
     },
     uruguay: {
-        text: "Uruguay",
+        text: "Uruguay.",
         img: {
             src: "Flag_of_Uruguay",
-            alt: "A picture of the flag of Uruguay"
+            alt: "A picture of the flag of Uruguay."
         }
     },
     smartassBarPlayer: {
@@ -517,19 +517,19 @@ var treeData = {
         branches: [
             {
                 id: "chile",
-                text: "Yes, I love being a smartass"
+                text: "Yes, I love being a smartass."
             },
             {
                 id: "rootForPause",
-                text: "No, I hate those people"
+                text: "No, I hate those people."
             }
         ]
     },
     chile: {
-        text: "Chile",
+        text: "Chile.",
         img: {
             src: "Flag_of_Chile",
-            alt: "A picture of the flag of Chile"
+            alt: "A picture of the flag of Chile."
         }
     },
     rootForPause: {
@@ -537,7 +537,7 @@ var treeData = {
         branches: [
             {
                 id: "ivoryCoast",
-                text: "Yes, soccer is peace"
+                text: "Yes, soccer is peace."
             },
             {
                 id: "animosityToAmerica",
@@ -546,14 +546,14 @@ var treeData = {
         ]
     },
     ivoryCoast: {
-        text: "Ivory Coast",
+        text: "Ivory Coast.",
         img: {
             src: "Flag_of_Ivory_Coast",
-            alt: "A picture of the flag of the Ivory Coast"
+            alt: "A picture of the flag of the Ivory Coast."
         }
     },
     animosityToAmerica: {
-        text: "How would you describe your animosity towards Americans",
+        text: "How would you describe your animosity towards Americans?",
         branches: [
             {
                 id: "ghana",
@@ -565,22 +565,22 @@ var treeData = {
             },
             {
                 id: "satanJersey",
-                text: "I harbor no great ill will towards America"
+                text: "I harbor no great ill will towards America."
             }
         ]
     },
     ghana: {
-        text: "Ghana",
+        text: "Ghana.",
         img: {
             src: "Flag_of_Ghana",
-            alt: "A picture of the flag of Ghana"
+            alt: "A picture of the flag of Ghana."
         }
     },
     mexico: {
-        text: "Mexico",
+        text: "Mexico.",
         img: {
             src: "Flag_of_Mexico",
-            alt: "A picture of the flag of Mexico"
+            alt: "A picture of the flag of Mexico."
         }
     },
     satanJersey: {
@@ -597,17 +597,17 @@ var treeData = {
         ]
     },
     bosniaAndHerzegovina: {
-        text: "Bosnia and Herzegovina",
+        text: "Bosnia and Herzegovina.",
         img: {
             src: "Flag_of_Bosnia_and_Herzegovina",
-            alt: "A picture of the flag of Bosnia and Herzegovina"
+            alt: "A picture of the flag of Bosnia and Herzegovina."
         }
     },
     belgium: {
-        text: "Belgium",
+        text: "Belgium.",
         img: {
             src: "Flag_of_Belgium",
-            alt: "A picture of the flag of Belgium"
+            alt: "A picture of the flag of Belgium."
         }
     }
 };
@@ -647,8 +647,9 @@ var output = (function () {
     };
 
     return {
-        render: function (context) {
+        render: function (context, callback) {
             $("#main-panel").html(nodeRenderer(context));
+            callback();
         }
     };
 })();
@@ -704,8 +705,15 @@ $(function () {
 
         }
 
+        function attachEvents() {
+            $("button").click(function () {
+                window.location.hash = "#" + $(this).attr('id');
+            });
+            $("#answers").focus();
+        }
+
         var reload = function () {
-            output.render(treeData[getHashOrDefault()])
+            output.render(treeData[getHashOrDefault()], attachEvents);
         };
 
         $(window).on("hashchange", function () {

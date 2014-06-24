@@ -3,7 +3,7 @@
     position: absolute;
     height: 100%;
     width: 100%;
-    background: url("img/World_Cup.png") no-repeat center;
+    background: url("img/Background.jpeg") no-repeat center;
 }
 
 .middle {
@@ -18,5 +18,11 @@
 }
 
 .image {
-    width: 480px;
+    width: 445px; /* 480 - 35, approximately 2 * padding = 35*/
+    height: auto;
+
+}
+
+.btn {
+    white-space: normal;
 }
