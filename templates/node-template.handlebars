@@ -1,6 +1,10 @@
 <div class="main-text panel panel-default">
     <div class="panel-heading">
-        Question:
+        {{#if question}}
+            Question:
+        {{else}}
+            You are:
+        {{/if}}
     </div>
     <div class="text panel-body text-center">
         <label for="answers">

@@ -675,6 +675,13 @@ var dataProcessor = function (data, root) {
     var stack = [root];
     while (stack.length != 0) {
         var current = stack.pop();
+        //Because all leaf nodes have img properties, this hack works. I really should
+        // not use it though because it's tying me to the current data structure.
+        //START HACK
+        if (data[current].hasOwnProperty("img")) {
+            data[current].question = false;
+        }
+        //END HACK
         if (data[current].branches) {
             for (var i = 0; i < data[current].branches.length; i++) {
                 var child = data[current].branches[i].id;
